@@ -1,10 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Indie+Flower&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 130 55% 90%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -13,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 275 90% 50%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 50 100% 60%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 38 100% 50%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -30,25 +33,9 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 275 90% 50%;
 
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 1rem;
   }
 
   .dark {
@@ -79,14 +66,6 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -96,6 +75,82 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-fairy-lightGreen text-foreground font-comic;
+    background-image: url('https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+  }
+
+  h1, h2, h3 {
+    @apply font-bold text-fairy-purple;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@layer components {
+  .wood-panel {
+    @apply bg-fairy-brown text-white p-4 rounded-lg border-4 border-fairy-lightBrown shadow-lg;
+    background-image: linear-gradient(to right, #8B5A2B, #A0522D, #CD853F, #A0522D, #8B5A2B);
+  }
+
+  .fairy-button {
+    @apply bg-fairy-purple hover:bg-fairy-lightPurple text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .mushroom {
+    @apply relative;
+  }
+
+  .mushroom-cap {
+    @apply w-14 h-8 bg-fairy-pink rounded-full relative z-10 animate-bounce-slow;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .mushroom-spots {
+    @apply absolute top-1 left-2 w-2 h-2 bg-white rounded-full;
+    box-shadow: 4px 2px 0 rgba(255, 255, 255, 0.8), 8px 1px 0 rgba(255, 255, 255, 0.6), 2px 4px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  .mushroom-stem {
+    @apply w-6 h-10 bg-fairy-lightBrown mx-auto rounded-b-lg;
+    box-shadow: inset -2px 0 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .snail {
+    @apply relative w-16 h-16;
+  }
+
+  .snail-shell {
+    @apply w-10 h-10 bg-fairy-yellow rounded-full relative;
+    box-shadow: inset -3px -3px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .snail-shell-pattern {
+    @apply absolute top-1 left-2 w-6 h-6 border-2 border-fairy-brown rounded-full;
+    border-radius: 50% 50% 0 50%;
+    transform: rotate(45deg);
+  }
+
+  .snail-body {
+    @apply absolute bottom-0 left-2 w-12 h-6 bg-fairy-lightPurple rounded-l-full;
+  }
+
+  .snail-eyes {
+    @apply absolute w-1 h-3 bg-black rounded-full;
+  }
+  
+  .star-rating {
+    @apply flex space-x-1;
+  }
+  
+  .star {
+    @apply text-gray-300;
+  }
+  
+  .star.active {
+    @apply text-fairy-yellow;
   }
 }
