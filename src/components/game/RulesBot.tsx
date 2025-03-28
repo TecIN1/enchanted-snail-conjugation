@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { HelpCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import {
   Dialog,
   DialogContent,
@@ -51,6 +52,14 @@ const RulesBot: React.FC = () => {
           <div>
             <h3 className="font-bold text-fairy-purple">Rappel:</h3>
             <p>Le passé composé se forme avec l'auxiliaire (avoir ou être) + participe passé du verbe.</p>
+          </div>
+          
+          <div className="pt-4 flex justify-center">
+            <Link to="/chatbot">
+              <Button className="bg-fairy-purple hover:bg-fairy-lightPurple text-white font-bold px-6 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+                Poser une question à l'assistant
+              </Button>
+            </Link>
           </div>
         </div>
       </DialogContent>
