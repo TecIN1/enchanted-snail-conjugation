@@ -31,8 +31,26 @@ const GameScreen: React.FC<GameScreenProps> = ({
   const [snailPosition, setSnailPosition] = useState(0);
   const [snailEmotion, setSnailEmotion] = useState<'happy' | 'sad' | 'neutral'>('neutral');
   const [isGameComplete, setIsGameComplete] = useState(false);
+  const [shuffledOptions, setShuffledOptions] = useState<string[]>([]);
   
   const currentQuestion = currentLevel?.questions[currentQuestionIndex];
+  
+  // Fonction pour mélanger un tableau
+  const shuffleArray = (array: string[]): string[] => {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+  };
+  
+  // Mélange les options lorsque la question change
+  useEffect(() => {
+    if (currentQuestion) {
+      setShuffledOptions(shuffleArray(currentQuestion.options));
+    }
+  }, [currentQuestion]);
   
   useEffect(() => {
     if (!currentLevel) {
@@ -223,7 +241,7 @@ const GameScreen: React.FC<GameScreenProps> = ({
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {currentQuestion.options.map((option) => (
+                {shuffledOptions.map((option) => (
                   <Button
                     key={option}
                     onClick={() => handleAnswer(option)}
