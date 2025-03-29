@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import WelcomeScreen from '@/components/game/WelcomeScreen';
 import LevelSelection from '@/components/game/LevelSelection';
 import GameScreen from '@/components/game/GameScreen';
+import RulesBot from '@/components/game/RulesBot';
 import { Toaster } from '@/components/ui/toaster';
 
 type GameState = 'welcome' | 'levelSelection' | 'playing';
@@ -54,6 +55,9 @@ const Index: React.FC = () => {
           playerName={playerName}
         />
       )}
+      
+      {/* Add the RulesBot component to be visible on all screens */}
+      <RulesBot />
       
       <Toaster />
     </div>
