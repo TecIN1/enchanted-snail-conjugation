@@ -52,8 +52,8 @@ const ChatBot: React.FC = () => {
     setIsLoading(true);
 
     try {
-      // Send the question to n8n
-      const response = await fetch('https://haffa2.app.n8n.cloud/webhook-test/Conju6ais0n', {
+      // Send the question to n8n with the updated webhook URL
+      const response = await fetch('https://haffa2.app.n8n.cloud/webhook-test/conjugaison', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
