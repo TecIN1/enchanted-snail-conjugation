@@ -1,4 +1,3 @@
-
 export interface Question {
   id: string;
   incomplete: string;
@@ -420,6 +419,278 @@ export const gameLevels: Level[] = [
         incomplete: "Cette histoire, il l'a ___ plusieurs fois.",
         options: ["racontée", "raconté", "racontés", "racontées"],
         correctAnswer: "racontée"
+      }
+    ]
+  },
+  {
+    id: 7,
+    title: "Verbes pronominaux",
+    description: "Utilisons les verbes pronominaux au passé composé",
+    difficulty: 'difficile',
+    questions: [
+      {
+        id: "7-1",
+        incomplete: "Je ___ très tôt ce matin.",
+        options: ["me suis levé", "m'ai levé", "me suis levée", "m'est levé"],
+        correctAnswer: "me suis levé"
+      },
+      {
+        id: "7-2",
+        incomplete: "Nous ___ à la montagne l'été dernier.",
+        options: ["nous sommes promenés", "nous avons promené", "nous sommes promené", "nous ont promenés"],
+        correctAnswer: "nous sommes promenés"
+      },
+      {
+        id: "7-3",
+        incomplete: "Tu ___ dans l'eau froide ?",
+        options: ["t'es baigné", "t'as baigné", "t'es baignée", "t'as baignée"],
+        correctAnswer: "t'es baigné"
+      },
+      {
+        id: "7-4",
+        incomplete: "Elles ___ toute la journée.",
+        options: ["se sont amusées", "se sont amusés", "s'ont amusées", "s'ont amusés"],
+        correctAnswer: "se sont amusées"
+      },
+      {
+        id: "7-5",
+        incomplete: "Vous ___ de bonne heure.",
+        options: ["vous êtes couchés", "vous avez couché", "vous êtes couché", "vous ont couchés"],
+        correctAnswer: "vous êtes couchés"
+      },
+      {
+        id: "7-6",
+        incomplete: "Il ___ dans la glace.",
+        options: ["s'est regardé", "s'a regardé", "s'est regardée", "s'a regardée"],
+        correctAnswer: "s'est regardé"
+      },
+      {
+        id: "7-7",
+        incomplete: "Elle ___ de son travail.",
+        options: ["s'est plainte", "s'a plainte", "s'est plaint", "s'a plaint"],
+        correctAnswer: "s'est plainte"
+      },
+      {
+        id: "7-8",
+        incomplete: "Les enfants ___ les mains.",
+        options: ["se sont lavé", "se sont lavés", "se sont lavées", "s'ont lavé"],
+        correctAnswer: "se sont lavé"
+      },
+      {
+        id: "7-9",
+        incomplete: "Je ___ à la boulangerie.",
+        options: ["me suis arrêté", "m'ai arrêté", "me suis arrêtée", "m'est arrêté"],
+        correctAnswer: "me suis arrêté"
+      },
+      {
+        id: "7-10",
+        incomplete: "Nous ___ longtemps au téléphone.",
+        options: ["nous sommes parlé", "nous avons parlés", "nous sommes parlés", "nous avons parlé"],
+        correctAnswer: "nous sommes parlé"
+      }
+    ]
+  },
+  {
+    id: 8,
+    title: "Verbes à double auxiliaire",
+    description: "Certains verbes peuvent utiliser être ou avoir",
+    difficulty: 'difficile',
+    questions: [
+      {
+        id: "8-1",
+        incomplete: "Elle ___ de sa chambre. (sortir de)",
+        options: ["est sortie", "a sorti", "est sorti", "a sortie"],
+        correctAnswer: "est sortie"
+      },
+      {
+        id: "8-2",
+        incomplete: "Elle ___ les poubelles. (sortir quelque chose)",
+        options: ["a sorti", "est sortie", "a sortie", "est sorti"],
+        correctAnswer: "a sorti"
+      },
+      {
+        id: "8-3",
+        incomplete: "Nous ___ par la fenêtre. (passer par)",
+        options: ["sommes passés", "avons passé", "sommes passé", "avons passés"],
+        correctAnswer: "sommes passés"
+      },
+      {
+        id: "8-4",
+        incomplete: "Nous ___ un examen. (passer un examen)",
+        options: ["avons passé", "sommes passés", "avons passés", "sommes passé"],
+        correctAnswer: "avons passé"
+      },
+      {
+        id: "8-5",
+        incomplete: "Il ___ en Italie. (descendre vers)",
+        options: ["est descendu", "a descendu", "est descendue", "a descendue"],
+        correctAnswer: "est descendu"
+      },
+      {
+        id: "8-6",
+        incomplete: "Il ___ les escaliers. (descendre quelque chose)",
+        options: ["a descendu", "est descendu", "a descendue", "est descendue"],
+        correctAnswer: "a descendu"
+      },
+      {
+        id: "8-7",
+        incomplete: "Tu ___ trop vite. (monter)",
+        options: ["es monté", "as monté", "es montée", "as montée"],
+        correctAnswer: "es monté"
+      },
+      {
+        id: "8-8",
+        incomplete: "Tu ___ les bagages. (monter quelque chose)",
+        options: ["as monté", "es monté", "as montée", "es montée"],
+        correctAnswer: "as monté"
+      },
+      {
+        id: "8-9",
+        incomplete: "Elles ___ à midi. (rentrer)",
+        options: ["sont rentrées", "ont rentré", "sont rentrés", "ont rentrées"],
+        correctAnswer: "sont rentrées"
+      },
+      {
+        id: "8-10",
+        incomplete: "Elles ___ la voiture au garage. (rentrer quelque chose)",
+        options: ["ont rentré", "sont rentrées", "ont rentrées", "sont rentré"],
+        correctAnswer: "ont rentré"
+      }
+    ]
+  },
+  {
+    id: 9,
+    title: "Verbes du 3ème groupe",
+    description: "Maîtrisons les participes passés des verbes irréguliers",
+    difficulty: 'difficile',
+    questions: [
+      {
+        id: "9-1",
+        incomplete: "J'___ un beau cadeau.",
+        options: ["ai reçu", "ai recevoir", "suis reçu", "ai reçus"],
+        correctAnswer: "ai reçu"
+      },
+      {
+        id: "9-2",
+        incomplete: "Il ___ son manteau sur la chaise.",
+        options: ["a mis", "a mettre", "est mis", "a mettait"],
+        correctAnswer: "a mis"
+      },
+      {
+        id: "9-3",
+        incomplete: "Nous ___ notre décision.",
+        options: ["avons pris", "avons prenons", "sommes pris", "avons prit"],
+        correctAnswer: "avons pris"
+      },
+      {
+        id: "9-4",
+        incomplete: "Tu ___ à quelle heure ?",
+        options: ["as dormi", "as dormir", "es dormi", "as dormis"],
+        correctAnswer: "as dormi"
+      },
+      {
+        id: "9-5",
+        incomplete: "Elle ___ à son ami.",
+        options: ["a souri", "a sourire", "est souri", "a sourit"],
+        correctAnswer: "a souri"
+      },
+      {
+        id: "9-6",
+        incomplete: "Vous ___ le problème.",
+        options: ["avez résolu", "avez résoudre", "êtes résolu", "avez résolus"],
+        correctAnswer: "avez résolu"
+      },
+      {
+        id: "9-7",
+        incomplete: "Ils ___ très vite.",
+        options: ["ont couru", "ont courir", "sont couru", "ont couraient"],
+        correctAnswer: "ont couru"
+      },
+      {
+        id: "9-8",
+        incomplete: "J'___ en retard.",
+        options: ["ai craint", "ai craindre", "suis craint", "ai craignais"],
+        correctAnswer: "ai craint"
+      },
+      {
+        id: "9-9",
+        incomplete: "Nous ___ le secret.",
+        options: ["avons su", "avons savoir", "sommes su", "avons savions"],
+        correctAnswer: "avons su"
+      },
+      {
+        id: "9-10",
+        incomplete: "Elle ___ une belle chanson.",
+        options: ["a écrit", "a écrire", "est écrit", "a écrivait"],
+        correctAnswer: "a écrit"
+      }
+    ]
+  },
+  {
+    id: 10,
+    title: "Révision générale",
+    description: "Révisons tous les cas du passé composé",
+    difficulty: 'difficile',
+    questions: [
+      {
+        id: "10-1",
+        incomplete: "Les fleurs que j'___ sont fanées.",
+        options: ["ai cueillies", "ai cueilli", "suis cueilli", "ai cueilles"],
+        correctAnswer: "ai cueillies"
+      },
+      {
+        id: "10-2",
+        incomplete: "Nous nous ___ la main.",
+        options: ["sommes serré", "avons serré", "sommes serrés", "sommes serrée"],
+        correctAnswer: "sommes serré"
+      },
+      {
+        id: "10-3",
+        incomplete: "Elle ___ pendant trois heures.",
+        options: ["a dormi", "est dormie", "a dormie", "est dormi"],
+        correctAnswer: "a dormi"
+      },
+      {
+        id: "10-4",
+        incomplete: "Les touristes ___ la montagne.",
+        options: ["ont gravi", "sont gravis", "ont gravis", "sont gravi"],
+        correctAnswer: "ont gravi"
+      },
+      {
+        id: "10-5",
+        incomplete: "Tu ___ longtemps au téléphone.",
+        options: ["as parlé", "es parlé", "as parlée", "es parlée"],
+        correctAnswer: "as parlé"
+      },
+      {
+        id: "10-6",
+        incomplete: "Vous ___ chaussures dans l'entrée.",
+        options: ["avez laissé vos", "êtes laissés vos", "avez laissés vos", "êtes laissé vos"],
+        correctAnswer: "avez laissé vos"
+      },
+      {
+        id: "10-7",
+        incomplete: "La pièce que nous ___ était magnifique.",
+        options: ["avons vue", "avons vu", "sommes vus", "avons vues"],
+        correctAnswer: "avons vue"
+      },
+      {
+        id: "10-8",
+        incomplete: "Ils se ___ une nouvelle voiture.",
+        options: ["sont acheté", "ont acheté", "sont achetés", "ont achetée"],
+        correctAnswer: "sont acheté"
+      },
+      {
+        id: "10-9",
+        incomplete: "Cette femme, je l'___ hier.",
+        options: ["ai rencontrée", "ai rencontré", "suis rencontrée", "ai rencontres"],
+        correctAnswer: "ai rencontrée"
+      },
+      {
+        id: "10-10",
+        incomplete: "Les événements se ___ très vite.",
+        options: ["sont succédé", "sont succédés", "ont succédé", "ont succédés"],
+        correctAnswer: "sont succédé"
       }
     ]
   }
